@@ -6,8 +6,7 @@ if (isset($_SESSION["em_id"])) {
     <!DOCTYPE html>
     <html lang="en">
     <title> Empleado</title>
-
-    <head>
+   
         <?php require_once('../html/head.php')  ?>
     </head>
 
@@ -35,7 +34,7 @@ if (isset($_SESSION["em_id"])) {
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Lista de <?php echo $_SESSION["ruta"] ?></h6>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Launch demo modal</button>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Nuevo Empleado</button>
                                 </div>
                                 <div class="card-body">
 
@@ -73,12 +72,18 @@ if (isset($_SESSION["em_id"])) {
                             ...
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary">Guardar</button>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!--scripts-->
+        <?php include_once('../html/scripts.php')  ?>
+        <script src="empleados.js"></script>
+</body>
+</html>
 
         <?php
     } else {
