@@ -96,6 +96,8 @@ $.post('../../controllers/empleados.controller.php?op=uno', {
 document.getElementById('TituloModalEmpleo').innerHTML = "Editar Empleado";
 $('#modalEmpleado').modal('show');
 };
+
+
 var eliminar = (em_id) => {
 Swal.fire({
     title: 'Empleado',
@@ -121,7 +123,6 @@ Swal.fire({
     }
 })
 };
-
 
 var limpiar = () => {
   document.getElementById('em_id').value = '';
