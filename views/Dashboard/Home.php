@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php require_once('../html/head.php')  ?>
+   <!-- ======= Head ======= -->
+<?php require_once('../html/head.php')?>
 </head>
 
 <body>

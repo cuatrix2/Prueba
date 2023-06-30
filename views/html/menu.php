@@ -215,7 +215,7 @@
         <li class="nav-item">
             <a class="nav-link collapsed" href="users-profile.html">
                 <i class="bi bi-person"></i>
-                <span>Profile</span>
+                 <span class="d-none d-md-block dropdown-toggle ps-2"><?php error_reporting(0); echo  $_SESSION['em_nombre'] . ' ' .$_SESSION ['em_apellido']?></span>
             </a>
         </li><!-- End Profile Page Nav -->
 
@@ -241,7 +241,7 @@
         </li><!-- End Register Page Nav -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="pages-login.html">
+            <a class="nav-link collapsed" href="../../Index.php">
                 <i class="bi bi-box-arrow-in-right"></i>
                 <span>Login</span>
             </a>
