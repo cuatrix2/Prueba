@@ -21,7 +21,6 @@
         </li><!-- End Search Icon-->
 
    
-
         </li><!-- End Notification Nav -->
 
       
@@ -74,7 +73,7 @@
             <li>
               <a class="dropdown-item d-flex align-items-center" href="../html/salir.php">
                 <i class="bi bi-box-arrow-right"></i>
-                <span>Salir</span>
+                <span>Cerrar Sesion</span>
               </a>
             </li>
 
