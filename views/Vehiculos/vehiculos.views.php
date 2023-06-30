@@ -1,11 +1,11 @@
 <?php
 include_once('../../config/sesiones.php');
 if (isset($_SESSION["em_id"])) {
-    $_SESSION["ruta"] = "Empleados";
+    $_SESSION["ruta"] = "Vehiculo";
 ?>
     <!DOCTYPE html>
     <html lang="en">
-    <title><?php echo $_SESSION["ruta"] ?></title>
+    <title> <?php echo $_SESSION["ruta"] ?></title>
    
         <?php require_once('../html/head.php')  ?>
     </head>
@@ -34,7 +34,7 @@ if (isset($_SESSION["em_id"])) {
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Lista de <?php echo $_SESSION["ruta"] ?></h6>
-                                    <button onclick="cargaSelectRoles()" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEmpleado">Nuevo Empleado</button>
+                                    <button  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalVehiculo">Nuevo <?php echo $_SESSION["ruta"] ?> </button>
                                 </div>
                                 <div class="card-body">
 
@@ -42,16 +42,13 @@ if (isset($_SESSION["em_id"])) {
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Nombres</th>
-                                                <th>Apellidos</th>
-                                                <th>Cedula</th>
-                                                <th>Telefono</th>
-                                                <th>Correo</th>
-                                                <th>Rol</th>
+                                                <th>Marca</th>
+                                                <th>Modelo</th>
+                                                <th>Placa</th>
                                                 <th>Opciones</th>
                                             </tr>
                                         </thead>
-                                        <tbody id="EmpleadoTabla"></tbody>
+                                        <tbody id="VehiculoTabla"></tbody>
                                     </table>
                                 </div>
                             </div>
@@ -61,47 +58,31 @@ if (isset($_SESSION["em_id"])) {
             </div>
 
             <!-- Modal -->
-            <div class="modal fade" id="modalEmpleado" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="modalVehiculo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="TituloModalEmpleo">Nuevo Empleado</h1>
+                            <h1 class="modal-title fs-5" id="TituloModalVehiculos">Nuevo Vehiculo</h1>
                             <button type="button" onclick="limpiar()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         
-                    <form id= "Empleados_form">
+                    <form id= "Vehiculos_form">
                         <div class="modal-body">
-                        <input type="hidden" name="em_id" id="em_id">
+                        <input type="hidden" name="	id_vehiculo" id="id_vehiculo">
 
                         <div class="form-group">
-                                    <label for="em_nombre" class="control-label">Nombres</label>
-                                    <input type="text" name="em_nombre" id="em_nombre" class="form-control" required>
+                                    <label for="Marca" class="control-label">Marca</label>
+                                    <input type="text" name="Marca" id="Marca" class="form-control" required>
                                     </div>
                                     <div class="form-group">
-                                    <label for="em_apellido" class="control-label">Apellidos</label>
-                                        <input type="text" name="em_apellido" id="em_apellido" class="form-control" required>
+                                    <label for="Modelo" class="control-label">Modelo</label>
+                                        <input type="text" name="Modelo" id="Modelo" class="form-control" required>
                                     </div>
                                     <div class="form-group">
-                                    <label for="em_cedula" class="control-label">Cedula</label>
-                                        <input type="text" name="em_cedula" id="em_cedula" class="form-control" required>
+                                    <label for="Placa" class="control-label">Placa</label>
+                                        <input type="text" name="Placa" id="Placa" class="form-control" required>
                                     </div>
-                                    <div class="form-group">
-                                    <label for="em_telefono" class="control-label">Telefono</label>
-                                        <input type="text" name="em_telefono" id="em_telefono" class="form-control" required>
-                                    </div>
-                                    <div class="form-group">
-                                    <label for="em_correo" class="control-label">Correo</label>
-                                        <input type="mail" name="em_correo" id="em_correo" class="form-control" required>
-                                    </div>
-                                    <div class="form-group">
-                                    <label for="em_contrasena" class="control-label">Contrasena</label>
-                                        <input type="text" name="em_contrasena" id="em_contrasena" class="form-control" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="rol_id" class="control-label">Rol</label>
-                                        <select name="rol_id" id="rol_id" class="form-control">
-                                        </select>
-                                    </div>
+                                    
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" onclick="limpiar()" data-bs-dismiss="modal">Cerrar</button>
@@ -114,7 +95,7 @@ if (isset($_SESSION["em_id"])) {
 
             <!--scripts-->
         <?php include_once('../html/scripts.php')  ?>
-        <script src="empleados.js"></script>
+        <script src="vehiculos.js"></script>
 </body>
 </html>
 
