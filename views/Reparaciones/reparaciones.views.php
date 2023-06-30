@@ -34,7 +34,7 @@ if (isset($_SESSION["em_id"])) {
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Lista de <?php echo $_SESSION["ruta"] ?></h6>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalReparacion">Nuevo <?php echo $_SESSION["ruta"] ?> </button>
+                                    <button type="button" onclick="cargaselect()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalReparacion">Nuevo <?php echo $_SESSION["ruta"] ?> </button>
                                 </div>
                                 <div class="card-body">
 

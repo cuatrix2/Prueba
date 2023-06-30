@@ -16,7 +16,7 @@ class PropietarioModel
     {
         $con = new ClaseConexion();
         $con = $con->ProcedimientoConectar();
-        $cadena = "INSERT INTO `propietarios`(`nombre`, `cedula`, `id_vehiculo`) VALUES ('$Nombres', '$Apellidos', '$Vehiculo')";
+        $cadena = "INSERT INTO `propietarios` (`nombre`, `cedula`, `id_vehiculo`) VALUES ('$Nombres', '$Apellidos', $Vehiculo)";
         if (mysqli_query($con, $cadena)) {
             return 'ok';
         } else {

@@ -34,7 +34,7 @@ if (isset($_SESSION["em_id"])) {
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Lista de <?php echo $_SESSION["ruta"] ?></h6>
-                                    <button  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPropietario">Nuevo <?php echo $_SESSION["ruta"] ?> </button>
+                                    <button type="button" onclick="cargaselect()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPropietario">Nuevo <?php echo $_SESSION["ruta"] ?> </button>
                                 </div>
                                 <div class="card-body">
 
@@ -69,14 +69,13 @@ if (isset($_SESSION["em_id"])) {
                     <form id= "Propietarios_form">
                         <div class="modal-body">
                         <input type="hidden" name="	id_propietario" id="id_propietario">
-
                         <div class="form-group">
-                                    <label for="Marca" class="control-label">Nombre</label>
-                                    <input type="text" name="Marca" id="Marca" class="form-control" required>
+                                    <label for="nombre" class="control-label">Nombre</label>
+                                    <input type="text" name="nombre" id="nombre" class="form-control" required>
                                     </div>
                                     <div class="form-group">
-                                    <label for="Modelo" class="control-label">Cedula</label>
-                                        <input type="text" name="Modelo" id="Modelo" class="form-control" required>
+                                    <label for="cedula" class="control-label">Cedula</label>
+                                        <input type="text" name="cedula" id="cedula" class="form-control" required>
                                     </div>
                                     <div class="form-group">
                                     <label for="id_vehiculo" class="control-label">Placa</label>

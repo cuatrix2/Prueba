@@ -64,7 +64,17 @@ function init(){
     },
     });
     };
-    
+    var cargaselect = () => {
+      var htmlplaca = '<option value="0">Seleccione una Opción</option>';    
+      // Corregir la URL de la solicitud POST
+      $.post("../../controllers/vehiculos.controller.php?op=todos", {}, (listaplacas) => {
+        listaplacas = JSON.parse(listaplacas);
+        $.each(listaplacas, (index, vehiculo) => {
+          htmlplaca += `<option value="${vehiculo.id_vehiculo}">${vehiculo.Placa}-M:${vehiculo.Modelo}</option>`;
+        });
+        $("#id_vehiculo").html(htmlplaca);
+      });
+    };
     var uno = (id_propietario) => {
     $.post('../../controllers/propietarios.controller.php?op=uno', {
         id_propietario: id_propietario

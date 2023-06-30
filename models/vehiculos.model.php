@@ -37,14 +37,12 @@ class VehiculosModel
         $con = new ClaseConexion();
         $con = $con->ProcedimientoConectar();
         $cadena = "UPDATE `vehiculos` SET `Marca`='$Marca', `Modelo`='$Modelo', `Placa`='$Placa' WHERE `id_vehiculo`='$idvehiculo'";
-        
         if (mysqli_query($con, $cadena)) {
             return 'ok';
         } else {
             return mysqli_error($con);
         }
     }
-
 
     public function Eliminar($idvehiculo)
     {
